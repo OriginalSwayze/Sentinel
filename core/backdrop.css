@@ -1,0 +1,13 @@
+/* SENTINEL — black field with a tactical grid and a slow scanning line. */
+html { background: var(--sn-bg) !important; }
+body { background: transparent !important; }
+html::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+        radial-gradient(60% 50% at 20% 0%, color-mix(in srgb, var(--sn-orange) 7%, transparent), transparent 70%),
+        linear-gradient(90deg, rgba(232,234,236,.035) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(0deg, rgba(232,234,236,.035) 1px, transparent 1px) 0 0 / 40px 40px,
+        var(--sn-bg); opacity: var(--sn-grid, 1); }
+html::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(transparent 49.8%, color-mix(in srgb, var(--sn-orange) 10%, transparent) 50%, transparent 50.2%) 0 0 / 100% 200vh no-repeat;
+    animation: sn-scan 9s linear infinite; opacity: var(--sn-grid, 1); }
+.Wrapper.ForceOpaqueBackground, .FocusNavigationRoot, .Root, .OuterFrame, .ContentFrame { background: transparent !important; }

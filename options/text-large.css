@@ -1,0 +1,3 @@
+/* Text: Large — bigger list and body text where the layout allows it */
+html .ReactVirtualized__List .GameListEntryContainer > span { font-size: 15px !important; }
+html :is(.GameDescription, .PartnerEvent, .DialogBody, .PagedSettingsDialog .FieldLabel, .friend .playerName) { font-size: 15px !important; }

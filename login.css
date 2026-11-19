@@ -1,0 +1,16 @@
+/* Sentinel — the "Sign in to Steam" window. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+@import url("./core/backdrop.css");
+html .Login, html .Login.AnimatedBackground, html .LoginAnimatedBackground,
+html .Login .LoginStatusContainer, html .Login .SpinnerLoaderContainer { background: transparent !important; }
+html .Login.AnimatedBackground::before, html .LoginAnimatedBackground::after, html .Login video { display: none !important; }
+html .Login .SpinnerLoaderContainer { position: relative; }
+html .Login .SpinnerLoaderContainer > img { opacity: 0 !important; }
+/* SENTINEL sign-in */
+html .Login .SpinnerLoaderContainer::before { content: "ESTABLISHING AGENT LINK"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font: 12px Consolas, monospace; letter-spacing: .3em; color: #FF6A13; white-space: nowrap; animation: sn-pulse 1s infinite; }
+html .Login .LoadingStatus, html .Login .LoadingStatus > .LoginStatus { font-family: Bahnschrift, sans-serif !important; text-transform: uppercase; letter-spacing: .16em; color: #AEB4BA !important; }
+html .Login .ProgressBar { border-radius: 0 !important; background: #FF6A13 !important; }
+html .Login .Avatar img { border-radius: 0 !important; box-shadow: 0 0 0 1px #FF6A13 !important; }
+html .Login .UserContainer > .PersonaName { font-family: Bahnschrift, sans-serif !important; letter-spacing: .24em; text-transform: uppercase; color: #E8EAEC !important; }

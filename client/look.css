@@ -1,0 +1,84 @@
+/* SENTINEL — the look */
+html :is(.UpdatesContainer .Name, .ShowcaseHeader .Focusable, .ShowcaseHeader .DialogDropDown_CurrentDisplay, .AppDetailsSection .SectionHeader, h2.SectionHeader, .HomeBox .Bar .Label) {
+    font-family: var(--sn-head) !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: .12em !important; color: #E8EAEC !important;
+}
+html :is(.UpdatesContainer .Name, .ShowcaseHeader .Focusable, .ShowcaseHeader .DialogDropDown_CurrentDisplay) { font-size: 17px !important; }
+html :is(.AppDetailsSection .SectionHeader, h2.SectionHeader) { font-size: 12px !important; padding-bottom: 6px !important; background: linear-gradient(90deg, var(--sn-line-2), transparent) 0 100% / 100% 1px no-repeat !important; }
+html .AppDetailsSection .SectionHeader::before { content: "" !important; display: inline-block !important; width: 8px !important; height: 8px !important; margin-right: 10px; background: var(--sn-orange) !important; box-shadow: none !important; transform: rotate(45deg) !important; border-radius: 0 !important; }
+html :is(.PlayBar .PlayBarLabel, .UpdatesContainer .EventTime, .LeftListSizableContainer .SearchBar .MenuHeader .ViewName, .ReactVirtualized__List .SectionName) {
+    font-family: var(--sn-mono) !important; font-size: 10px !important; font-weight: 400 !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--t-fg-3) !important;
+}
+html .ReactVirtualized__List .SectionName { color: var(--sn-orange) !important; }
+html .PlayBar :is(.LastPlayedInfo, .PlayBarDetailLabel) { font-family: var(--sn-head) !important; font-size: 14px !important; color: #E8EAEC !important; }
+
+/* Wordmark: a watch-face ring */
+html .RootMenuBar .RootMenuButton .SteamButton::before { width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle, var(--sn-orange) 0 3px, transparent 3.5px), conic-gradient(var(--sn-orange) 0 75%, var(--sn-line-2) 0); -webkit-mask: radial-gradient(circle, #000 0 3px, transparent 3.5px 5px, #000 5.5px); mask: radial-gradient(circle, #000 0 3px, transparent 3.5px 5px, #000 5.5px); box-shadow: none; animation: none; }
+html .RootMenuBar .RootMenuButton .SteamButton::after { content: "SENTINEL"; font-family: var(--sn-head); font-weight: 700; font-size: 15px; letter-spacing: .34em; color: #E8EAEC; }
+html .RootMenuBar .RootMenuButton { font-family: var(--sn-head) !important; font-size: 12px !important; letter-spacing: .1em !important; text-transform: uppercase !important; color: var(--t-fg-3) !important; border-radius: 0 !important; }
+html .RootMenuBar .RootMenuButton:hover { background: transparent !important; color: var(--sn-orange) !important; }
+html .TitleBarControls .Button, html .TitleBarControls .AccountMenu { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 0 0 1px var(--sn-line-2) !important; }
+html .TitleBarControls .Button:hover, html .TitleBarControls .AccountMenu:hover { box-shadow: inset 0 0 0 1px var(--sn-orange) !important; transform: none !important; }
+html .TitleBarControls .AccountMenu { font-family: var(--sn-head) !important; text-transform: uppercase; letter-spacing: .08em; font-size: 12px !important; }
+html .TitleBarControls .AccountMenu .avatarHolder, html .TitleBarControls .AccountMenu img.avatar { border-radius: 0 !important; }
+html .TitleBarControls .AccountMenu .WalletBalance { background: transparent !important; color: var(--sn-orange) !important; font-family: var(--sn-mono) !important; }
+
+/* Panels: notched plates */
+html .Library > .Container > div:not(.MainPanel):first-child, html .MainPanel {
+    position: relative; border-radius: 0 !important; background: color-mix(in srgb, var(--sn-panel) 92%, transparent) !important; box-shadow: none !important;
+    clip-path: var(--sn-notch) !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+}
+html .Library > .Container > div:not(.MainPanel):first-child::after, html .MainPanel::after {
+    content: "" !important; position: absolute !important; inset: 0 !important; pointer-events: none; z-index: 20; display: block !important;
+    background: linear-gradient(225deg, var(--sn-orange) 0 9px, transparent 9px) !important; opacity: 1 !important; border: none !important; border-radius: 0 !important; -webkit-mask: none !important; mask: none !important;
+    box-shadow: inset 0 0 0 1px var(--sn-line) !important;
+}
+
+/* The inventory (game list) */
+html .HomeBox .Bar.Selected { background: var(--mr-grad-soft) !important; box-shadow: inset 2px 0 0 var(--sn-orange) !important; }
+html .SearchInput input.DialogInput, html .SearchInput input.DialogTextInputBase { border-radius: 0 !important; background-color: var(--sn-bg) !important; border: 1px solid var(--sn-line-2) !important; font-family: var(--sn-head) !important; font-size: 12px !important; letter-spacing: .06em; }
+html .SearchInput input.DialogInput:focus { border-color: var(--sn-orange) !important; }
+html .ReactVirtualized__List .SectionRule { height: 1px !important; background: var(--sn-line) !important; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer) { border-radius: 0 !important; box-shadow: inset 2px 0 0 var(--sn-line-2); }
+html .ReactVirtualized__List .Container.Installed:has(> .GameListEntryContainer) { box-shadow: inset 2px 0 0 var(--sn-o-35); }
+html .ReactVirtualized__List .Container.Running:has(> .GameListEntryContainer) { box-shadow: inset 2px 0 0 var(--sn-orange); }
+html .ReactVirtualized__List .GameListEntryContainer > span { font-family: var(--sn-head) !important; font-size: 13px !important; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer):hover { background: var(--sn-o-15) !important; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer):hover .GameListEntryContainer { transform: none !important; }
+html body .ReactVirtualized__List .Container.Selected.Selected:has(> .GameListEntryContainer) { background: var(--sn-brackets), linear-gradient(90deg, var(--sn-o-35), var(--sn-o-15)) !important; box-shadow: inset 2px 0 0 var(--sn-orange) !important; }
+html body .ReactVirtualized__List .Container.Selected.Selected:has(> .GameListEntryContainer) .GameListEntryContainer > span { color: #fff !important; font-weight: 600 !important; }
+html .ReactVirtualized__List .Container.Selected:has(> .GameListEntryContainer)::before { display: none !important; }
+html .ReactVirtualized__List .Container.Running:has(> .GameListEntryContainer) .GameListEntryContainer > span::after { content: "  \25CF ACTIVE"; color: var(--sn-orange); font: 10px var(--sn-mono); letter-spacing: .1em; animation: sn-pulse 1.4s infinite; }
+
+/* Home */
+html .UpdatesContainer { background: transparent !important; }
+html .UpdatesContainer .HoversEnabled, html .LibraryItemBox, html .LibraryItemBox > * { border-radius: 0 !important; }
+html .LibraryItemBox { box-shadow: 0 0 0 1px var(--sn-line) !important; transition: box-shadow .16s, transform .16s !important; }
+html .LibraryItemBox:hover { transform: translateY(-3px) !important; box-shadow: 0 0 0 1px var(--sn-orange), 0 12px 30px rgba(0,0,0,.5) !important; }
+html .LibraryItemBox::before { content: ""; position: absolute; inset: -5px; z-index: 5; pointer-events: none; background: var(--sn-brackets); opacity: 0; transition: opacity .16s, inset .16s; }
+html .LibraryItemBox:hover::before { opacity: 1; inset: -7px; }
+html .LibraryItemBoxShine { display: none !important; }
+html .PageLeft, html .PageRight { border-radius: 0 !important; background: var(--sn-panel) !important; box-shadow: inset 0 0 0 1px var(--sn-line-2) !important; }
+
+/* Game page */
+html .AppDetailsMain .TopCapsule { border-radius: 0 !important; }
+html .AppDetailsMain .PlayBar > .InnerContainer { border-radius: 0 !important; background: color-mix(in srgb, var(--sn-panel-2) 94%, transparent) !important; box-shadow: inset 0 0 0 1px var(--sn-line), inset 0 -2px 0 var(--sn-orange) !important; clip-path: var(--sn-cut) !important; }
+html .PlayButton.ButtonChild { border-radius: 0 !important; background: var(--sn-orange) !important; box-shadow: none !important; clip-path: var(--sn-cut) !important; animation: none !important; }
+html .PlayButton.ButtonChild .ButtonText { font-family: var(--sn-head) !important; font-weight: 700 !important; font-size: 16px !important; letter-spacing: .3em !important; text-transform: uppercase !important; color: #0C0E10 !important; }
+html .PlayButton.ButtonChild svg, html .PlayButton.ButtonChild svg path { fill: #0C0E10 !important; }
+html .PlayButton.ButtonChild::after { display: none !important; }
+html .PlayButton.ButtonChild:hover { filter: brightness(1.12); transform: none !important; }
+html .PlayBar .RightControls .MenuButton { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 0 0 1px var(--sn-line-2) !important; }
+html .LinksSection .LinkInner { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 -1px 0 var(--sn-line-2) !important; color: var(--t-fg-2) !important; font-family: var(--sn-head) !important; font-size: 12px !important; text-transform: uppercase !important; letter-spacing: .12em !important; }
+html .LinksSection .LinkInner:hover { box-shadow: inset 0 -2px 0 var(--sn-orange) !important; color: #fff !important; transform: none !important; }
+html .AppDetailsSection:not(.LinksSection) > .Panel, html .PartnerEvent.Event { border-radius: 0 !important; background: var(--sn-bg) !important; box-shadow: inset 0 0 0 1px var(--sn-line) !important; clip-path: var(--sn-notch); }
+html .PartnerEventFeaturedHeader { background: var(--sn-orange) !important; color: #0C0E10 !important; font-family: var(--sn-head) !important; letter-spacing: .2em; text-transform: uppercase; }
+html .ProgressBar .Unlocked, html .ProgressBar [class*="Unlocked"], html .PlayBar .DetailsProgressBar { border-radius: 0 !important; background: var(--sn-orange) !important; box-shadow: none !important; transform-origin: left; animation: sn-grow .8s cubic-bezier(.2,.8,.2,1) backwards; }
+html .ProgressBar, html .PlayBar .DetailsProgressContainer { border-radius: 0 !important; background: var(--sn-line) !important; }
+
+/* Startup: the agent link */
+html .od-boot.sn-link { position: fixed; inset: 0; z-index: 10000; pointer-events: none; background: var(--sn-bg); display: grid; place-items: center; animation: sn-out 300ms ease 2900ms forwards; }
+html .od-boot.sn-link .c { position: relative; width: 150px; height: 150px; display: grid; place-items: center; }
+html .od-boot.sn-link .c::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(var(--sn-orange) 0 30%, transparent 30% 50%, var(--sn-orange) 50% 62%, transparent 62%); -webkit-mask: radial-gradient(circle, transparent 66px, #000 67px); mask: radial-gradient(circle, transparent 66px, #000 67px); animation: sn-spin 1.4s linear infinite; }
+html .od-boot.sn-link .c::after { content: ""; position: absolute; inset: 14px; border-radius: 50%; border: 1px solid var(--sn-line-2); }
+html .od-boot.sn-link .t { font: 700 15px var(--sn-head); letter-spacing: .4em; color: #E8EAEC; padding-left: .4em; }
+html .od-boot.sn-link .s { margin-top: 26px; font: 11px var(--sn-mono); letter-spacing: .24em; color: var(--sn-orange); text-align: center; animation: sn-pulse 1s infinite; }

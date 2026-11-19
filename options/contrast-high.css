@@ -1,0 +1,4 @@
+/* Contrast: High — solid panels, brighter secondary text, no translucency */
+:root { --mr-setting-tint: 100%; --t-fg-2: var(--t-fg); --t-fg-3: color-mix(in srgb, var(--t-fg) 82%, var(--t-bg)); --t-fg-4: color-mix(in srgb, var(--t-fg) 62%, var(--t-bg)); }
+html .Library > .Container > div:not(.MainPanel):first-child, html .MainPanel { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+html :is(.ReactVirtualized__List .GameListEntryContainer > span, .PlayBar .PlayBarLabel, .UpdatesContainer .EventTime) { opacity: 1 !important; }

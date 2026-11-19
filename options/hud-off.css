@@ -1,0 +1,3 @@
+/* Readout: Off */
+:root { --od-hud: off; }
+html .od-hud { display: none !important; }

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   SENTINEL — layout: the field agent's view.
+     · The page fills the left; the inventory (game list) docks on the RIGHT
+     · Above the inventory, an agent watch: an orange seconds ring and status
+     · Navigation is a row of cut tabs under the title bar
+     · Inventory actions (add / transfers / network) sit at the inventory's foot
+   ========================================================================== */
+html .Library > .Container { flex-direction: row-reverse !important; padding: 6px 14px 14px !important; gap: 12px !important; }
+html .Library > .Container > .LibraryWindowDivider { opacity: 0; }
+html .Library > .Container > div:not(.MainPanel):first-child { padding: 128px 6px 56px !important; box-sizing: border-box; }
+
+/* Navigation tabs */
+html .TopBar > .SuperNavBar { justify-content: flex-start !important; padding-left: 14px !important; }
+html .SuperNavBar .SuperNav { background: transparent !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; gap: 4px !important; padding: 0 !important; }
+html .SuperNav .SuperNavMenu > .MenuButton {
+    height: 32px !important; padding: 0 22px !important; border-radius: 0 !important; clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    background: var(--sn-panel) !important; font-family: var(--sn-head) !important; font-weight: 600 !important; font-size: 13px !important; letter-spacing: .2em !important; text-transform: uppercase !important; color: var(--t-fg-3) !important;
+}
+html .SuperNav .SuperNavMenu:hover > .MenuButton { color: #fff !important; background: var(--sn-panel-2) !important; }
+html.mr-js .SuperNav .SuperNavMenu.Selected > .MenuButton, html .SuperNav .SuperNavMenu.Selected > .MenuButton { background: var(--sn-orange) !important; color: #0C0E10 !important; box-shadow: none !important; }
+html .SuperNav .mr-nav-indicator { display: none !important; }
+
+/* Agent watch */
+html .od-hud {
+    position: fixed !important; right: 22px; top: 96px; width: auto; height: 108px; margin: 0 !important; z-index: 32; pointer-events: none;
+    display: flex; align-items: center; gap: 14px; font: 11px var(--sn-mono); letter-spacing: .14em; color: var(--t-fg-3); text-transform: uppercase;
+}
+html .od-hud .ring { position: relative; width: 92px; height: 92px; border-radius: 50%; flex: none;
+    background: conic-gradient(var(--sn-orange) var(--a), var(--sn-line) 0); -webkit-mask: radial-gradient(circle, transparent 40px, #000 41px); mask: radial-gradient(circle, transparent 40px, #000 41px); }
+html .od-hud .face { position: absolute; left: 0; top: 50%; width: 92px; transform: translateY(-50%); text-align: center; font: 600 20px var(--sn-head); letter-spacing: .04em; color: #E8EAEC; }
+html .od-hud .face small { display: block; font: 9px var(--sn-mono); letter-spacing: .2em; color: var(--sn-orange); }
+html .od-hud .st { display: flex; flex-direction: column; gap: 4px; }
+html .od-hud .st b { color: #E8EAEC; font-weight: 400; }
+html .od-hud .st .on::before { content: "\25CF "; color: var(--sn-orange); animation: sn-pulse 1.4s infinite; }
+
+/* Inventory actions */
+html .BottomBar {
+    left: auto !important; right: 26px !important; bottom: 24px !important; margin: 0 !important; height: 34px !important; width: auto !important;
+    gap: 4px !important; padding: 0 !important; z-index: 31;
+}
+html .BottomBar::before { display: none !important; }
+html .BottomBar .DownloadStatus::before, html .BottomBar .DownloadStatus::after { display: none !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton) { height: 34px !important; width: 44px !important; padding: 0 !important; justify-content: center; border-radius: 0 !important; background: var(--sn-bg) !important; box-shadow: inset 0 0 0 1px var(--sn-line-2) !important; color: var(--t-fg-2) !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton):hover { box-shadow: inset 0 0 0 1px var(--sn-orange) !important; color: var(--sn-orange) !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton) :is(.Text, .Queue) { display: none !important; }

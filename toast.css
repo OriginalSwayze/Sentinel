@@ -1,0 +1,13 @@
+/* Sentinel — desktop notifications. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html:has(> body.DesktopToastContainer),
+html body.DesktopToastContainer { background: transparent !important; }
+html .DesktopToastContainer .DesktopToastBackground,
+html .DesktopToastContainer .DesktopToastTemplate { background: transparent !important; }
+/* SENTINEL notifications: a network alert */
+html .DesktopToastContainer .DesktopToastPopup { position: relative; border-radius: 0 !important; border: none !important; background: #14171A !important; box-shadow: inset 3px 0 0 var(--sn-orange, #FF6A13), inset 0 0 0 1px rgba(232,234,236,.14) !important; padding-top: 16px; }
+html .DesktopToastContainer .DesktopToastPopup::after { content: "NETWORK ALERT"; position: absolute; left: 12px; top: 4px; font: 9px Consolas, monospace; letter-spacing: .24em; color: var(--sn-orange, #FF6A13); }
+html .DesktopToastContainer .DesktopToastTemplate :is(.Header .Title,.GroupMessageUserName,.IngameTitle) { font-family: Bahnschrift, sans-serif !important; letter-spacing: .1em; text-transform: uppercase; color: #E8EAEC !important; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.StandardNotificationDescription,.GroupMessageBody,.StandardNotificationSubText) { color: #AEB4BA !important; }

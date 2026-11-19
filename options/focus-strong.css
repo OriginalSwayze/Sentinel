@@ -1,0 +1,2 @@
+/* Focus: Strong — a thick, high-visibility focus ring on everything focusable */
+html :focus-visible, html .gpfocus, html .Focusable:focus-visible { outline: 3px solid #FFFFFF !important; outline-offset: 2px !important; box-shadow: 0 0 0 6px #000 !important; }

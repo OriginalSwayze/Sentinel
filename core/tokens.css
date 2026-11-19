@@ -1,0 +1,41 @@
+/* SENTINEL — tokens. Charcoal, black, one signal orange; precise minimal type. */
+:root {
+    --sn-bg: #0C0E10;
+    --sn-panel: #14171A;
+    --sn-panel-2: #1B1F23;
+    --sn-orange: var(--sn-p-orange, #FF6A13);
+    --sn-o-15: color-mix(in srgb, var(--sn-orange) 15%, transparent);
+    --sn-o-35: color-mix(in srgb, var(--sn-orange) 35%, transparent);
+    --sn-line: rgba(232,234,236,.09);
+    --sn-line-2: rgba(232,234,236,.18);
+    --sn-head: "Bahnschrift", "Segoe UI", sans-serif;
+    --sn-mono: Consolas, "Cascadia Mono", monospace;
+    --sn-notch: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+    --sn-cut: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    /* Corner brackets drawn as backgrounds */
+    --sn-brackets:
+        linear-gradient(var(--sn-orange), var(--sn-orange)) 0 0 / 12px 2px no-repeat,
+        linear-gradient(var(--sn-orange), var(--sn-orange)) 0 0 / 2px 12px no-repeat,
+        linear-gradient(var(--sn-orange), var(--sn-orange)) 100% 100% / 12px 2px no-repeat,
+        linear-gradient(var(--sn-orange), var(--sn-orange)) 100% 100% / 2px 12px no-repeat;
+    --t-accent: var(--sn-orange);
+    --t-accent-2: #E8EAEC;
+    --t-alert: #FF3B30;
+    --t-bg: var(--sn-bg);
+    --t-panel: var(--sn-panel);
+    --t-ink: #0C0E10;
+    --t-fg: #E8EAEC;
+    --t-fg-2: #AEB4BA;
+    --t-fg-3: #79808A;
+    --t-fg-4: #4C525A;
+    --t-line: var(--sn-line);
+    --mr-r: 0px; --mr-r-lg: 0px; --mr-r-md: 0px; --mr-r-sm: 0px; --mr-r-pill: 0px;
+    --mr-glass: var(--sn-panel); --mr-glass-strong: var(--sn-panel-2); --mr-glass-solid: var(--sn-panel);
+    --mr-glass-filter: none; --mr-glass-edge: inset 0 0 0 1px var(--sn-line);
+    --mr-font: "Segoe UI", sans-serif; --mr-font-display: var(--sn-head); --mr-font-mono: var(--sn-mono);
+    --mr-grad: linear-gradient(var(--sn-orange), var(--sn-orange));
+    --mr-grad-soft: linear-gradient(90deg, var(--sn-o-15), transparent 80%);
+    --mr-on-accent: #0C0E10;
+    --mr-t-1: 80ms; --mr-t-2: 160ms; --mr-t-3: 260ms;
+    --mr-spot: none;
+}
