@@ -1,6 +1,6 @@
 # Sentinel
 
-**A tactical field-agent network.** Charcoal and black, one signal orange, precise minimal type. A [Millennium](https://steambrew.app) theme for the Steam client.
+**A tactical field-agent network.** Charcoal and black, one signal orange, precise minimal type. A Steam client theme for [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) and [Millennium](https://steambrew.app).
 
 ![Sentinel: library](media/library.gif)
 
@@ -14,13 +14,14 @@
 
 ## Install
 
-1. Install [Millennium](https://steambrew.app).
-2. Find **Sentinel** in the Millennium theme browser, or download this repository into `Steam/millennium/themes/Sentinel`.
-3. Open **Steam → Millennium → Themes** and pick **Sentinel**.
+- **With [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) (easiest):** in Steam press **Ctrl+Shift+B**, open
+  **Get more** and install **Sentinel**.
+- **By hand:** download **Sentinel.zip** from the [latest release](https://github.com/OriginalSwayze/Sentinel/releases/latest) and unzip
+  it into `%APPDATA%\Beyond Steam\themes\Sentinel` (Beyond Steam) or `Steam\millennium\themes\Sentinel` (Millennium).
 
 ## Options
 
-Open **Millennium → Themes → Sentinel** to change:
+In Beyond Steam's **Theme options** tab (or **Millennium → Themes → Sentinel**) you can change:
 
 Signal colour (Signal orange, Amber, Ice blue, Rogue red) · Tactical grid · Inventory side · Density · What's New · Readout · Startup screen · Motion · Privacy · Contrast · Focus rings · Text size
 
